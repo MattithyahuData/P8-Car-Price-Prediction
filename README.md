@@ -7,6 +7,7 @@
 
 ## Resources Used
 **Python 3.7, SSIS, SQL Server, Power BI, PowerPoint, AWS** 
+
 [**Python Packages:**](requirements.txt)**Packages:** pandas, numpy, sklearn, matplotlib, seaborn, selenium, flask, json, pickle  *pip install listed*
 
 ## Data Collection
