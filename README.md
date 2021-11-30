@@ -8,7 +8,7 @@
 ## Resources Used
 **Python 3.7, SSIS, SQL Server, Power BI, PowerPoint, AWS** 
 
-[**Python Packages:**](requirements.txt)**Packages:** pandas, numpy, sklearn, matplotlib, seaborn, selenium, flask, json, pickle  *pip install listed*
+[**Python Packages:**](requirements.txt) pandas, numpy, sklearn, matplotlib, seaborn, selenium, flask, json, pickle  *pip install listed*
 
 ## Data Collection
 Tweaked the web scraper github repo (above) to scrape 1000 job postings from glassdoor.com. With each job, we got the following:
