@@ -5,6 +5,8 @@
 * Optimized Linear, Lasso, and Random Forest Regressors using GridsearchCV to reach the best model. 
 * Built a client facing API using flask 
 
+[View Deployed Model](https://carsalepricecalc.herokuapp.com/)
+
 ## Resources Used
 **Python 3.7, SSIS, SQL Server, Power BI, PowerPoint, AWS** 
 
