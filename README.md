@@ -10,7 +10,8 @@
 ## Resources Used
 **Python 3.7, SSIS, SQL Server, Power BI, PowerPoint, AWS** 
 
-[**Python Packages:**](requirements.txt) pandas, numpy, sklearn, matplotlib, seaborn, selenium, flask, json, pickle  *pip install listed* *pip3 install lxml*
+[**Anaconda Packages:**](requirements.txt) pandas, numpy, sklearn, matplotlib, seaborn, selenium, flask, json, pickle  -- *pip install listed* 
+--*pip3 install lxml*
 
 [Kaggle Data source link](https://www.kaggle.com/nehalbirla/vehicle-dataset-from-cardekho?select=car+data.csv) [Average Year Conversion Rate Data Source link](https://en.wikipedia.org/wiki/Exchange_rate_history_of_the_Indian_rupee)
 
