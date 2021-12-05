@@ -1,8 +1,5 @@
 # Car Price Prediction: Project Overview 
 * End to end project reasearching the effects certain attributes have on the value of a car
-* Predicting Car prices based on specific features 
-* Model build with smaller dataset to evaluate model performance
-
 * Optimized Linear, Lasso, and Random Forest Regressors using GridsearchCV to reach the best model. 
 * Built a client facing API using flask 
 
