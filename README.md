@@ -1,4 +1,4 @@
-# Car Price Prediction: Project Overview 
+# 🚘 Car Price Prediction: Project Overview 
 * End to end project reasearching the effects certain attributes have on the value of a car
 * Optimized Linear, Lasso, and Random Forest Regressors using GridsearchCV to reach the best model. 
 * Built a client facing API using flask 
@@ -8,22 +8,27 @@
 ## Resources Used
 **Python 3.7, SSIS, SQL Server, Power BI, PowerPoint, AWS** 
 
-[**Anaconda Packages:**](requirements.txt) pandas, numpy, sklearn, matplotlib, seaborn, selenium, flask, json, pickle  -- *pip install listed* 
---*pip3 install lxml*
+[**Anaconda Packages:**](requirements.txt) pandas, numpy, sklearn, matplotlib, seaborn, selenium, flask, json, pickle  --> *pip install listed* --
+*pip3 install lxml*
 
 [Kaggle Data source link](https://www.kaggle.com/nehalbirla/vehicle-dataset-from-cardekho?select=car+data.csv) [Average Year Conversion Rate Data Source link](https://en.wikipedia.org/wiki/Exchange_rate_history_of_the_Indian_rupee)
 
 ## Data Collection
-Tweaked the web scraper github repo (above) to scrape 1000 job postings from glassdoor.com. With each job, we got the following:
-*	Job title
-*	Salary Estimate
-*	Job Description
-*	Rating
-*	Company 
-*	Location
+Source: Kaggle | Webscraping AVG Rupees/GBP conversion data
+*	Year	
+*   Selling_Price	
+*   Present_Price	
+*   Kms_Driven	
+*   Fuel_Type	
+*   Seller_Type	
+*   Transmission	
+*   Owner
+-------
+*   Conversion
+
 
 ## Data Cleaning
-After scraping the data, I needed to clean it up so that it was usable for our model. I made the following changes and created the following variables:
+After I had sraped and downloaded all the data I needed, I needed to clean it up so that it was usable for the model and analysis. I made the following changes and created the following variables:
 
 *	Parsed numeric data out of salary 
 *	Made columns for employer provided salary and hourly wages 

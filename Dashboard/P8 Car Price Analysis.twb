@@ -1119,8 +1119,8 @@ avg percentage change in price!!</run>
         <devicelayout auto-generated='true' name='Phone'>
           <size maxheight='1450' minheight='1450' sizing-mode='vscroll' />
           <zones>
-            <zone h='100000' id='30' type-v2='layout-basic' w='100000' x='0' y='0'>
-              <zone h='98230' id='29' param='vert' type-v2='layout-flow' w='99064' x='468' y='885'>
+            <zone h='100000' id='32' type-v2='layout-basic' w='100000' x='0' y='0'>
+              <zone h='98230' id='31' param='vert' type-v2='layout-flow' w='99064' x='468' y='885'>
                 <zone forceUpdate='true' h='15411' id='26' type-v2='text' w='13490' x='468' y='885'>
                   <formatted-text>
                     <run fontcolor='#000000' fontname='Tableau Bold' fontsize='24'>CAR PRICES</run>
