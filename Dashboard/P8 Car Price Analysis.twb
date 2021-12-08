@@ -1074,10 +1074,10 @@ avg percentage change in price!!</run>
       <size sizing-mode='automatic' />
       <zones>
         <zone h='100000' id='10' type-v2='layout-basic' w='100000' x='0' y='0'>
-          <zone h='98230' id='24' param='horz' type-v2='layout-flow' w='84973' x='14559' y='885'>
-            <zone h='98230' id='9' param='vert' type-v2='layout-flow' w='84973' x='14559' y='885'>
-              <zone h='3319' id='35' param='horz' type-v2='layout-flow' w='84855' x='14618' y='996'>
-                <zone fixed-size='285' forceUpdate='true' h='1991' id='11' is-fixed='true' type-v2='text' w='84855' x='14618' y='996'>
+          <zone h='98230' id='24' param='horz' type-v2='layout-flow' w='84974' x='14558' y='885'>
+            <zone h='98230' id='9' param='vert' type-v2='layout-flow' w='84974' x='14558' y='885'>
+              <zone h='3319' id='35' param='horz' type-v2='layout-flow' w='84856' x='14617' y='996'>
+                <zone fixed-size='285' forceUpdate='true' h='1991' id='11' is-fixed='true' type-v2='text' w='84856' x='14617' y='996'>
                   <zone-style>
                     <format attr='border-color' value='#000000' />
                     <format attr='border-style' value='none' />
@@ -1094,8 +1094,8 @@ avg percentage change in price!!</run>
               </zone-style>
             </zone>
           </zone>
-          <zone fixed-size='160' h='87409' id='23' is-fixed='true' param='vert' type-v2='layout-flow' w='14091' x='468' y='11706'>
-            <zone h='9513' id='25' name='Owners amount' pane-specification-id='1' param='[federated.0zdx14h00moif91glm62k0wvpijf].[none:Owner:ok]' type-v2='color' w='14091' x='468' y='11706'>
+          <zone fixed-size='160' h='87409' id='23' is-fixed='true' param='vert' type-v2='layout-flow' w='14090' x='468' y='11706'>
+            <zone h='9513' id='25' name='Owners amount' pane-specification-id='1' param='[federated.0zdx14h00moif91glm62k0wvpijf].[none:Owner:ok]' type-v2='color' w='14090' x='468' y='11706'>
               <zone-style>
                 <format attr='border-color' value='#000000' />
                 <format attr='border-style' value='none' />
@@ -1103,7 +1103,7 @@ avg percentage change in price!!</run>
                 <format attr='margin' value='4' />
               </zone-style>
             </zone>
-            <zone h='7301' id='37' name='Corr Present Price selling price by car' pane-specification-id='0' param='[federated.0zdx14h00moif91glm62k0wvpijf].[none:Transmission:nk]' type-v2='color' w='14091' x='468' y='21219'>
+            <zone h='7301' id='37' name='Corr Present Price selling price by car' pane-specification-id='0' param='[federated.0zdx14h00moif91glm62k0wvpijf].[none:Transmission:nk]' type-v2='color' w='14090' x='468' y='21219'>
               <zone-style>
                 <format attr='border-color' value='#000000' />
                 <format attr='border-style' value='none' />
@@ -1111,7 +1111,7 @@ avg percentage change in price!!</run>
                 <format attr='margin' value='4' />
               </zone-style>
             </zone>
-            <zone h='5752' id='42' type-v2='dashboard-object' w='14091' x='468' y='28520'>
+            <zone h='5752' id='42' type-v2='dashboard-object' w='14090' x='468' y='28520'>
               <button _.fcp.DashboardExportButton.true...button-click-action-metadata='pdf' action='' button-type='text'>
                 <_.fcp.DashboardExportButton.true...export-button-action>tabdoc:abstract-dashboard-button-export-wrapper dashboard-button-export-type=&quot;pdf&quot; dashboarddoc-id=&quot;{A99BB06E-258A-4A7E-ACDF-1595E84F70F4}&quot;</_.fcp.DashboardExportButton.true...export-button-action>
                 <button-visual-state>
@@ -1129,7 +1129,7 @@ avg percentage change in price!!</run>
               </zone-style>
             </zone>
           </zone>
-          <zone forceUpdate='true' h='10821' id='26' type-v2='text' w='14091' x='468' y='885'>
+          <zone forceUpdate='true' h='10821' id='26' type-v2='text' w='14090' x='468' y='885'>
             <formatted-text>
               <run fontcolor='#000000' fontname='Tableau Bold' fontsize='24'>CAR PRICES</run>
               <run>&#10;- Source: Kaggle</run>
@@ -1207,9 +1207,9 @@ avg percentage change in price!!</run>
         <devicelayout auto-generated='true' name='Phone'>
           <size maxheight='1900' minheight='1900' sizing-mode='vscroll' />
           <zones>
-            <zone h='100000' id='44' type-v2='layout-basic' w='100000' x='0' y='0'>
-              <zone h='98230' id='43' param='vert' type-v2='layout-flow' w='99064' x='468' y='885'>
-                <zone forceUpdate='true' h='10821' id='26' type-v2='text' w='14091' x='468' y='885'>
+            <zone h='100000' id='46' type-v2='layout-basic' w='100000' x='0' y='0'>
+              <zone h='98230' id='45' param='vert' type-v2='layout-flow' w='99064' x='468' y='885'>
+                <zone forceUpdate='true' h='10821' id='26' type-v2='text' w='14090' x='468' y='885'>
                   <formatted-text>
                     <run fontcolor='#000000' fontname='Tableau Bold' fontsize='24'>CAR PRICES</run>
                     <run>&#10;- Source: Kaggle</run>
@@ -1222,7 +1222,7 @@ avg percentage change in price!!</run>
                     <format attr='padding' value='0' />
                   </zone-style>
                 </zone>
-                <zone fixed-size='285' forceUpdate='true' h='1991' id='11' type-v2='text' w='84855' x='14618' y='996'>
+                <zone fixed-size='285' forceUpdate='true' h='1991' id='11' type-v2='text' w='84856' x='14617' y='996'>
                   <zone-style>
                     <format attr='border-color' value='#000000' />
                     <format attr='border-style' value='none' />
@@ -1290,7 +1290,7 @@ avg percentage change in price!!</run>
                     <format attr='padding' value='0' />
                   </zone-style>
                 </zone>
-                <zone h='9513' id='25' name='Owners amount' pane-specification-id='1' param='[federated.0zdx14h00moif91glm62k0wvpijf].[none:Owner:ok]' type-v2='color' w='14091' x='468' y='11706'>
+                <zone h='9513' id='25' name='Owners amount' pane-specification-id='1' param='[federated.0zdx14h00moif91glm62k0wvpijf].[none:Owner:ok]' type-v2='color' w='14090' x='468' y='11706'>
                   <zone-style>
                     <format attr='border-color' value='#000000' />
                     <format attr='border-style' value='none' />
@@ -1309,7 +1309,7 @@ avg percentage change in price!!</run>
                     <format attr='padding' value='0' />
                   </zone-style>
                 </zone>
-                <zone h='5752' id='42' type-v2='dashboard-object' w='14091' x='468' y='28520'>
+                <zone h='5752' id='42' type-v2='dashboard-object' w='14090' x='468' y='28520'>
                   <button _.fcp.DashboardExportButton.true...button-click-action-metadata='pdf' action='' button-type='text'>
                     <_.fcp.DashboardExportButton.true...export-button-action>tabdoc:abstract-dashboard-button-export-wrapper dashboard-button-export-type=&quot;pdf&quot; dashboarddoc-id=&quot;{A99BB06E-258A-4A7E-ACDF-1595E84F70F4}&quot;</_.fcp.DashboardExportButton.true...export-button-action>
                     <button-visual-state>
@@ -1367,7 +1367,7 @@ avg percentage change in price!!</run>
                     <format attr='padding' value='0' />
                   </zone-style>
                 </zone>
-                <zone h='7301' id='37' name='Corr Present Price selling price by car' pane-specification-id='0' param='[federated.0zdx14h00moif91glm62k0wvpijf].[none:Transmission:nk]' type-v2='color' w='14091' x='468' y='21219'>
+                <zone h='7301' id='37' name='Corr Present Price selling price by car' pane-specification-id='0' param='[federated.0zdx14h00moif91glm62k0wvpijf].[none:Transmission:nk]' type-v2='color' w='14090' x='468' y='21219'>
                   <zone-style>
                     <format attr='border-color' value='#000000' />
                     <format attr='border-style' value='none' />
@@ -1688,7 +1688,7 @@ avg percentage change in price!!</run>
           <zoom type='entire-view' />
         </viewpoint>
       </viewpoints>
-      <active id='-1' />
+      <active id='23' />
       <simple-id uuid='{D5C763D6-6C3C-4A12-A8C7-B071B100650C}' />
     </window>
   </windows>
