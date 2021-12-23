@@ -6,7 +6,7 @@
 [View Deployed Model](https://carsalepricecalc.herokuapp.com/)
 
 ## Resources Used
-**Python 3.7, SSIS, SQL Server, Power BI, PowerPoint, AWS** 
+**Python 3.8, SSIS, SQL Server, Power BI, PowerPoint, AWS** 
 
 [**Anaconda Packages:**](requirements.txt) **pip install listed**; 
 **pandas, numpy, sklearn, matplotlib, seaborn, selenium, flask, json, pickle, lxml**   
