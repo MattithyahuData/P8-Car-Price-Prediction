@@ -28,7 +28,7 @@ Source: Kaggle | Webscraping AVG Rupees/GBP conversion data
 *   Conversion
 
 
-## Data Cleaning
+## Data Pre-processing 
 After I had sraped and downloaded all the data I needed, I needed to clean it up so that it was usable for the model and analysis. I made the following changes and created the following variables:
 
 *	Parsed numeric data out of salary 
