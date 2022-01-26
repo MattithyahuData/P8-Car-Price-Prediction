@@ -2,104 +2,133 @@
 * End to end project reasearching the effects certain attributes have on the value of a car
 * Optimized Linear, Lasso, and Random Forest Regressors using GridsearchCV to reach the best model. 
 * Built a client facing API using flask 
+* Deployed Model in Power BI for Business Intelligence analysis 
 
 [View Deployed Model](https://carsalepricecalc.herokuapp.com/)
-
+         
 ## Resources Used
-**Python 3.8, SSIS, SQL Server, Power BI, PowerPoint, AWS** 
+**Python 3.8, SQL Server, Tableau, Heroku** 
 
-[**Anaconda Packages:**](requirements.txt) **pip install listed**; 
-**pandas, numpy, sklearn, matplotlib, seaborn, selenium, flask, json, pickle, lxml**   
+[**Anaconda Packages:**](requirements.txt) **pandas, numpy, pandas_profiling, ipywidgets, sklearn, matplotlib, seaborn, sqlalchemy, pyodbc, kaggle, pickle, lxml**   
 
+## [Data Collection](Code/P2_Code.ipynb)
+Data loaded using kaggle API <br>
+```
+!kaggle datasets download -d kmalit/bank-customer-churn-prediction -p ..\Data --unzip 
+```
 
-[Kaggle Data source link](https://www.kaggle.com/nehalbirla/vehicle-dataset-from-cardekho?select=car+data.csv) [Average Year Conversion Rate Data Source link](https://en.wikipedia.org/wiki/Exchange_rate_history_of_the_Indian_rupee)
-
-## Data Collection
-Source: Kaggle | Webscraping AVG Rupees/GBP conversion data
-*	Year	
-*   Selling_Price	
-*   Present_Price	
-*   Kms_Driven	
-*   Fuel_Type	
-*   Seller_Type	
-*   Transmission	
-*   Owner
--------
-*   Conversion
-
-
-## Data Pre-processing 
-After I had sraped and downloaded all the data I needed, I needed to clean it up so that it was usable for the model and analysis. I made the following changes and created the following variables:
-
-*	Parsed numeric data out of salary 
-*	Made columns for employer provided salary and hourly wages 
-*	Removed rows without salary 
-*	Parsed rating out of company text 
-*	Made a new column for company state 
-*	Added a column for if the job was at the company’s headquarters 
-*	Transformed founded date into age of company 
+[Data source link](https://www.kaggle.com/nehalbirla/vehicle-dataset-from-cardekho?select=car+data.csv) [Average Year Conversion Rate Data Source link](https://en.wikipedia.org/wiki/Exchange_rate_history_of_the_Indian_rupee)
+[Data](Data/Churn_Modelling.csv)
+*  Rows: 10000 | Columns: 14
+    *	Year	
+    *   Selling_Price	
+    *   Present_Price	
+    *   Kms_Driven	
+    *   Fuel_Type	
+    *   Seller_Type	
+    *   Transmission	
+    *   Owner
+    -------
+    *   Conversion
 
 
-## Exploratory data analysis 
-I looked at the distributions of the data and the value counts for the various categorical variables. Below are a few highlights from the pivot tables. 
-
-![alt text](https://github.com/PlayingNumbers/ds_salary_proj/blob/master/salary_by_job_title.PNG "Salary by Position")
-![alt text](https://github.com/PlayingNumbers/ds_salary_proj/blob/master/positions_by_state.png "Job Opportunities by State")
-![alt text](https://github.com/PlayingNumbers/ds_salary_proj/blob/master/correlation_visual.png "Correlations")
+## [Data Pre-processing](Code/P2_Code.ipynb)
+After I had all the data I needed, I needed to check it was ready for exploration and later modelling. I made the following changes and created the following variables:   
+*   General NULL and data validity checks  
 
 
-## Data Warehousing
-AAAAAAAAAAAAAAAAAAAAAAAAA
+## [Data Warehousing](Code/P2_Code.ipynb)
+I warehouse all data in a SQL Server instance for later use and reference.
 
-*	Made a new column for company state 
-*	Added a column for if the job was at the company’s headquarters 
-*	Transformed founded date into age of company 
+*   ETL in python to SQL Server Database.
+*   Formatted column headers to SQL compatibility.  
 
+## [Exploratory data analysis](Code/P2_Code.ipynb) 
+I looked at the distributions of the data and the value counts for the various categorical variables that would be fed into the model. Below are a few highlights from the analysis.
+*   79.63% of customers have churned - Distrubution of features and their effects on churning - Some features have outliers, visualising this allows for greater clarifty on the extent. 
+<img src="images/Churn_barchart_distrib.png" />
+<img src="images/independentfeatures_distrib.png" />
+<img src="images/boxplots.png" />
 
-## Data Visualisation
-AAAAAAAAAAAAAAAAAAAAAAAAA
+*   I looked at the correlation the features have
+<img src="images/churn_correlation.png" />
 
-*	Made a new column for company state 
-*	Added a column for if the job was at the company’s headquarters 
-*	Transformed founded date into age of company 
-
-## Data Analytics
-AAAAAAAAAAAAAAAAAAAAAAAAA
-
-*	Made a new column for company state 
-*	Added a column for if the job was at the company’s headquarters 
-*	Transformed founded date into age of company 
+## [Data Visualisation & Analytics](https://app.powerbi.com/view?r=eyJrIjoiNDExYjQ0OTUtNWI5MC00OTQ5LWFlYmUtYjNkMzE1YzE2NmE0IiwidCI6IjYyZWE3MDM0LWI2ZGUtNDllZS1iZTE1LWNhZThlOWFiYzdjNiJ9&pageName=ReportSection)
+[View Interactive Dashboard](https://app.powerbi.com/view?r=eyJrIjoiNDExYjQ0OTUtNWI5MC00OTQ5LWFlYmUtYjNkMzE1YzE2NmE0IiwidCI6IjYyZWE3MDM0LWI2ZGUtNDllZS1iZTE1LWNhZThlOWFiYzdjNiJ9&pageName=ReportSection)
+*   I created an interactive dashboard to deploy the machine learning model to benefit the business.
+*   I visualised various key features and hihglighted their overall correlation to a customers churn. 
 
 ## Business Intelligence
-AAAAAAAAAAAAAAAAAAAAAAAAA
+On Page 2 of the interactive dashboard I have provided the stake holders with the new customer names and the customers that are likely to churn due to their characteristics.
 
-*	Made a new column for company state 
-*	Added a column for if the job was at the company’s headquarters 
-*	Transformed founded date into age of company 
+*   These customers can be offered subsidised deals and incentives to keep them on
+*   Greater engagement with customers could keep some customers on board 
+*   Providing quality customer service can also provide customers with long term value and appreciation for the business
+*   The complaints team should pay particular attention to complaints from customers who are predicted to churn.
+- 96% of unhappy customers dont complain  and 91% of those will simply leave and never come back?
 
-## ML/DL Model Building 
+## [Feature Engineering](Code/P2_Code.ipynb)    ->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> LEFT OFFFF 
+I transformed the categorical variable(s) 'geography' and 'gender' into dummy variables. I also split the data into train and tests sets with a test size of 20%.
+*   One Hot encoding to encode values
+*   Using RobustScaler to scale  
 
-First, I transformed the categorical variables into dummy variables. I also split the data into train and tests sets with a test size of 20%.   
+## [ML/DL Model Building](Code/P11_Code.ipynb)
 
-I tried three different models and evaluated them using Mean Absolute Error. I chose MAE because it is relatively easy to interpret and outliers aren’t particularly bad in for this type of model.   
+I tried eight different models and evaluated them using initially using accuracy_score and then MSE/RMSE. I chose MSE and RMSE because it is sensitive to outliers, punishes larger errors and is relatively easy to interpret.   
 
-I tried three different models:
-*	**Multiple Linear Regression** – Baseline for the model
-*	**Lasso Regression** – Because of the sparse data from the many categorical variables, I thought a normalized regression like lasso would be effective.
-*	**Random Forest** – Again, with the sparsity associated with the data, I thought that this would be a good fit. 
+I tried eight different models:
+*   **KN Neighbors Classifier** 
+*   **Linear SVC** 
+*   **Decision Tree Classifier** 
+*   **Random Forest Classifier**
+*   **XGB Classifier** 
+*   **AdaBoost Classifier**  
+*   **Gaussian NB** 
+*   **Quadratic Discriminant Analysis** 
 
-## Model performance
-The Random Forest model far outperformed the other approaches on the test and validation sets. 
-*	**Random Forest** : MAE = 11.22
-*	**Linear Regression**: MAE = 18.86
-*	**Ridge Regression**: MAE = 19.67
+<img src="images/Crossvalidation.png" />
 
-## Deployment 
-In this step, I built a flask API endpoint that was hosted on a local webserver by following along with the TDS tutorial in the reference section above. The API endpoint takes in a request with a list of values from a job listing and returns an estimated salary. 
+## [Model performance](Code/P11_Code.ipynb)
+The Quadratic Discriminant Analysis model outperformed the other approaches on the test and validation sets. 
+*   **Quadratic Discriminant Analysis** : Accuracy = 96% 
 
-## Evaluation 
-In this step, I built a flask API endpoint that was hosted on a local webserver by following along with the TDS tutorial in the reference section above. The API endpoint takes in a request with a list of values from a job listing and returns an estimated salary. 
+## [Model Optimisation and Evaluation](Code/P11_Code.ipynb)
+In this step, I used GridsearchCV to find the best parameters to optimise the performance of the model.
+Using the best parameters, I improved the model accuracy by **1%**
+
+*   **Quadratic Discriminant Analysis** : Accuracy = 97% | MSE = 0.03 | RMSE = 0.17 (2dp)
+
+## [Deployment](https://app.powerbi.com/view?r=eyJrIjoiNDExYjQ0OTUtNWI5MC00OTQ5LWFlYmUtYjNkMzE1YzE2NmE0IiwidCI6IjYyZWE3MDM0LWI2ZGUtNDllZS1iZTE1LWNhZThlOWFiYzdjNiJ9&pageName=ReportSection)
+I built a flask REST API endpoint that was hosted on a local webserver before AWS EC2 deployment. The API endpoint takes in a request value; height and weight and returns predicted BMI index. I also optimised and formatted the frontend using HTML and CSS. 
+
+## [Model Evaluation](Code/P11_Code.ipynb)
+*   A confusion matrix showing the accuracy score of 97.25% achieved by the model. 
+<img src="images/Confusionmatrix.png" />
 
 
-# Data Source Link: 
-[]()
+## [Project Evaluation](Presentation/P11Presentation.pptx) 
+*   WWW
+    *   The end-to-end process
+    *   Deployment and sharing of work 
+*   EBI 
+    *   Better project management and planning would have made this project faster
+    *   Explore GitHub pages deployment through AWS 
+
+## [Project Management (Agile | Scrum)](https://www.atlassian.com/software/jira)
+* Resources used
+    * Jira
+    * Confluence
+    * Trello 
+
+## Questions and See more projects    
+
+* ### [See more projects here](https://github.com/MattithyahuData?tab=repositories)
+* ### [Contact me here](mailto:theanalyticsolutions@gmail.com) 
+
+
+
+
+
+
+
+
