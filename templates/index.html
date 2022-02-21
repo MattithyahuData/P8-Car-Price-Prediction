@@ -9,20 +9,20 @@
 
 <body>
 
-    <div style="color:blue">
+    <div style="color:rgb(255, 255, 255)">
         <form action="{{ url_for('predict')}}" method="post">
-            <h2>Predictive analysis</h2>
+            <h2><strong>Car Valuation Calculator</strong></h2>
             <h3>Year</h3>
             <input id="first" name="Year" type="number ">
-            <h3>What is the Showroom Price?(In lakhs)</h3><br><input id="second" name="Present_Price" required="required">
-            <h3>How Many Kilometers Drived?</h3><input id="third" name="Kms_Driven" required="required">
-            <h3>How much owners previously had the car(0 or 1 or 3) ?</h3><br><input id="fourth" name="Owner" required="required">
-            <h3>What Is the Fuel type?</h3><br><select name="Fuel_Type_Petrol" id="fuel" required="required">
+            <h3>Purchase price</h3><br><input id="second" name="Present_Price" required="required">
+            <h3>Current mileage (in Kms)</h3><input id="third" name="Kms_Driven" required="required">
+            <h3>Previous owners</h3><br><input id="fourth" name="Owner" required="required">
+            <h3>Fuel type</h3><br><select name="Fuel_Type_Petrol" id="fuel" required="required">
                 <option value="Petrol">Petrol</option>
                 <option value="Diesel">Diesel</option>
                 <option value="Diesel">CNG</option>
             </select>
-            <h3>Are you A Dealer or Individual</h3><br><select name="Seller_Type_Individual" id="resea" required="required">
+            <h3>Dealer/Individual</h3><br><select name="Seller_Type_Individual" id="resea" required="required">
                 <option value="Dealer">Dealer</option>
                 <option value="Individual">Individual</option>
             </select>
@@ -30,7 +30,7 @@
                 <option value="Mannual">Manual Car</option>
                 <option value="Automatic">Automatic Car</option>
             </select>
-            <br><br><button id="sub" type="submit ">Calculate the Selling Price</button>
+            <br><br><button id="sub" type="submit ">Get Car Value</button>
             <br>
 
 
@@ -40,7 +40,7 @@
 
 
 
-        <br><br><h3>{{ prediction_text }}<h3>
+        <br><br><h1>{{ prediction_text }}<h1>
     </div>
 
 
@@ -48,7 +48,7 @@
 
     <style>
         body {
-            background-color: lightslategray;
+            background-color: rgb(70, 69, 69);
             text-align: center;
             padding: 0px;
         }
@@ -64,7 +64,7 @@
             border-radius: 60px;
             border-color: 45px;
             border-style: solid;
-            font-family: cursive;
+            font-family: Arial, Helvetica, sans-serif;
             text-align: center;
             background-color: rgb(168, 131, 61);
             font-size: medium;
