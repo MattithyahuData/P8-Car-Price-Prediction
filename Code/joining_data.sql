@@ -1,16 +1,14 @@
--- P8 
-/*
-- Converting Selling_price columns to GBP based on the year of selling
-- Converting Present_price 
-1 Lakhs = Rupees 100,000
 
-1. Convert to Rupee * 100,000
-2. Multiple by GBP(average) [1 rupee ro GBP]
+-- Converting Selling_price columns to GBP based on the year of selling -- 
 
-Finding AVG Exchange rates for every year from 2000 to 2017 
-2000
+-- Converting Present_price 
+-- 1 Lakhs = Rupees 100,000
 
-*/
+-- 1. Convert to Rupee * 100,000
+-- 2. Multiple by GBP(average) [1 rupee to GBP]
+
+-- Finding AVG Exchange rates for every year from 2000 to 2017 
+
 
 SELECT	P8Car_Prices.*, 
 		P8IND_to_GBP.Conversion, 
