@@ -1,5 +1,5 @@
 # 🚘 Car Price Prediction: Project Overview 
-* End to end project reasearching the effects certain attributes have on the value of a car
+* End to end project researching the effects certain attributes have on the value of a car
 * Optimised Random Forest Regressor using RandomizedSearchCV to reach the best model
 * Built a client facing API using flask 
 * Deployed Model in using Heroku for wider use 
@@ -13,10 +13,8 @@
 [Data Warehousing](#DataWarehousing)<br>
 [Exploratory data analysis](#EDA)<br>
 [Data Visualisation & Analytics](#Dataviz)<br>
-<!-- [Business Intelligence](#Busintelli)<br> -->
 [Feature Engineering](#FeatEng)<br>
 [ML/DL Model Building](#ModelBuild)<br>
-<!-- [Model performance](#ModelPerf)<br> -->
 [Model Optimisation](#ModelOpt)<br>
 [Model Evaluation](#ModelEval)<br>
 [Deployment](#ModelDeploy)<br>
@@ -24,7 +22,6 @@
 [Project Evaluation](#PrjEval)<br>
 [Looking Ahead](#Lookahead)<br>
 [Questions | Contact me ](#Lookahead)<br>
-
 
 <a name="Resources"></a>  
 
@@ -47,13 +44,13 @@ Powershell command for data import using kaggle API <br>
 [Data source link](https://www.kaggle.com/nehalbirla/vehicle-dataset-from-cardekho)
 [Data](Data/car data.csv)
 *  Rows: 301 | Columns: 9
-    *	Year	
-    *   Selling_Price	
-    *   Present_Price	
-    *   Kms_Driven	
-    *   Fuel_Type	
-    *   Seller_Type	
-    *   Transmission	
+    *   Year    
+    *   Selling_Price   
+    *   Present_Price   
+    *   Kms_Driven  
+    *   Fuel_Type   
+    *   Seller_Type 
+    *   Transmission    
     *   Owner
 3
  
@@ -63,8 +60,8 @@ Powershell command for data import using kaggle API <br>
 ## [Data Pre-processing](Code/joining_data.sql)
 After I had all the data I needed, I needed to check it was ready for exploration and later modelling. I made the following changes and created the following variables:   
 *   General NULL and data validity checks  
-*   Web-scraped conversion data for the correpeonding years for Rupees to GBP. 
-*   Used SQL to join this data and apply hte conversions respectivly 
+*   Web-scraped conversion data for the corresponding years for Rupees to GBP. 
+*   Used SQL to join this data and apply the conversions respectively 
     *   I created substitute columns from Lakhs to GBP and used those instead 
 
 <a name="DataWarehousing"></a>
@@ -88,9 +85,8 @@ I looked at the distributions of the data and the value counts for the various c
 
 <img src="images/categoricalfeatures_distrib.png" />
 
-
 *   The features are not strongly correlated generally. 
-*   The kms_driven are inversly correlated to the year of sale, which makes sense becasue older cars are more likely to have driven further than those with a more recent year (larger year)
+*   The kms_driven are inversely correlated to the year of sale, which makes sense because older cars are more likely to have driven further than those with a more recent year (larger year)
 <img src="images/correlation.png" />
 
 <a name="Dataviz"></a>  
@@ -98,7 +94,6 @@ I looked at the distributions of the data and the value counts for the various c
 ## [Data Visualisation & Analytics](https://public.tableau.com/app/profile/mattithyahu/viz/P8CarPriceAnalysis/Dashboard?publish=yes)
 [View Interactive Dashboard](https://public.tableau.com/app/profile/mattithyahu/viz/P8CarPriceAnalysis/Dashboard?publish=yes)
 *   I created an interactive dashboard to interactively analyse the reltionships between features.
-
 
 <!-- <a name="Busintelli"></a>  
 
@@ -122,7 +117,7 @@ I transformed the categorical variables 'fuel_type', 'seller_type', and 'transmi
 
 ## [ML/DL Model Building](Code/P6_Code.ipynb)
 
-I used the RandomForestRegressor becasue of its perfomative benefits . RFRs have some key advantages that make them most suitable for certain problems and situations:
+I used the RandomForestRegressor because of its performative benefits. RFRs have some key advantages that make them most suitable for certain problems and situations:
 *   It automates missing values present in the data
 *   Normalising of data is not required as it uses a rule-based approach
 
@@ -146,7 +141,6 @@ regressor = RandomizedSearchCV(estimator = regressor, param_distributions = rand
 regressor.fit(X_train, y_train)
 ```
 
-
 <a name="ModelEval"></a> 
 
 ## [Model Evaluation](Code/P6_Code.ipynb)
@@ -154,7 +148,7 @@ regressor.fit(X_train, y_train)
 An R-Squared value above 0.7 would generally be seen as showing a high level of correlation. The model achieved a R2 value of 0.828.
 A value of 0.5 means that half of the variance in the outcome variable is explained by the model.
 
-*   Plotting the actual and predicted values for botht the training and test sets shows how accracy and linear correlation decreases only slightly in the test data. 
+*   Plotting the actual and predicted values for both the training and test sets shows how accuracy and linear correlation decreases only slightly in the test data. 
 <img src="images/trainevaluation.png" />
 <img src="images/testevaluation.png" />
 
@@ -184,7 +178,7 @@ The end point was deployed using the Heroku cloud platform. Click above to use i
 *   WWW
     *   The end-to-end process
     *   Use larger data 
-    *   Use data tailored to european cars 
+    *   Use data tailored to European cars 
 *   EBI 
     *   Frontend Tuning
     *   Try other algorithms 
@@ -201,6 +195,7 @@ The end point was deployed using the Heroku cloud platform. Click above to use i
 For questions, feedback, and contribution requests contact me
 * ### [Click here to email me](mailto:theanalyticsolutions@gmail.com) 
 * ### [See more projects here](https://github.com/MattithyahuData?tab=repositories)
+
 
 
 
