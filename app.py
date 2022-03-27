@@ -23,6 +23,7 @@ def Home():
 
 # route() decorator to tell Flask what URL should trigger our function.
 @app.route("/predict", methods=['POST'])
+
 # Predict method
 def predict():
     # Fuel_Type_Diesel=0
